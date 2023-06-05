@@ -1,23 +1,5 @@
 # Boas-vindas ao repositório do Inventory Reports
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
-
-# Termos e acordos
-
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta e do Manual da Pessoa Estudante da Trybe.
-
-# Entregáveis
-
-<details>
-  <summary><strong>🤷🏽‍♀️ Como entregar</strong></summary><br />
-
-  Para entregar o seu projeto você deverá criar um *Pull Request* neste repositório.
-
-  Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/4d67f5b4-34a6-489f-a205-b6c7dc50fc16/) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
-</details>
-
 <details>
   <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
 
@@ -45,25 +27,15 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
   </ul>
 </details>
 
-<details>
-  <summary><strong>🗓 Data de Entrega</strong></summary><br />
-  
-  * Este projeto é individual;
-  * Serão `2` dias de projeto;
-  * Data para entrega no prazo regular: `13/04/2023 14:00`.
-
-</details>
-
-
 # Orientações
 <details>
   <summary><strong>⚠ Antes de começar a desenvolver</strong></summary><br />
 
   1. Clone o repositório
 
-  - Use o comando: `git clone git@github.com:tryber/sd-023-b-inventory-report.git`
+  - Use o comando: `git@github.com:FranciscoVieir/Inventory-report.git`
   - Entre na pasta do repositório que você acabou de clonar:
-    - `cd sd-023-b-inventory-report`
+    - `cd inventory-report`
 
   2. Crie o ambiente virtual para o projeto
 
@@ -73,220 +45,6 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   - `python3 -m pip install -r dev-requirements.txt`
   
-  4. Crie uma branch a partir da branch `master`
-
-  - Verifique que você está na branch `master`
-    - Exemplo: `git branch`
-  - Se não estiver, mude para a branch `master`
-    - Exemplo: `git checkout master`
-  - Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-    - Você deve criar uma branch no seguinte formato: `nome-github-nome-do-projeto`
-    - Exemplo: `git checkout -b joaozinho-inventory-report`
-
-  5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-
-  - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
-  - Adicione o novo arquivo ao _stage_ do Git
-    - Exemplo:
-      - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-      - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
-  - Faça o `commit` inicial
-    - Exemplo:
-      - `git commit -m 'iniciando o projeto inventory-report'` (fazendo o primeiro commit)
-      - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-  6. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-  - Usando o exemplo anterior: `git push -u origin joaozinho-inventory-report`
-
-  7. Crie um novo `Pull Request` _(PR)_
-
-  - Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-inventory-report/pulls)
-  - Clique no botão verde _"New pull request"_
-  - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  - Coloque um título para a sua _Pull Request_
-    - Exemplo: _"Cria tela de busca"_
-  - Clique no botão verde _"Create pull request"_
-  - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  - **Não se preocupe em preencher mais nada por enquanto!**
-  - Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-inventory-report/pulls) e confira que o seu _Pull Request_ está criado
-
-</details>
-
-<details>
-  <summary><strong>⌨️ Durante o desenvolvimento</strong></summary><br />
-
-  - Faça `commits` das alterações que você fizer no código regularmente
-
-  - Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
-
-  - Os comandos que você utilizará com mais frequência são:
-    1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-    2. `git add` _(para adicionar arquivos ao stage do Git)_
-    3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-    4. `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-    5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-
-</details>
-
-<details>
-  <summary><strong>🧱 Estrutura do Projeto</strong></summary><br />
-  Este repositório já contém um template com a estrutura de diretórios e arquivos, tanto de código quanto de teste criados. Veja abaixo:
-
-  ```
-  Legenda:
-  🔸Arquivos que não podem ser alterados
-  🔹Arquivos a serem alterados para realizar os requisitos.
-  .
-  ├── inventory_report
-  │   ├── data
-  │   │   ├── 🔸inventory.csv
-  │   │   ├── 🔸inventory.json
-  │   │   └── 🔸inventory.xml
-  │   ├── importer
-  │   │   ├── 🔹csv_importer.py
-  │   │   ├── 🔹importer.py
-  │   │   ├── 🔹json_importer.py
-  │   │   └── 🔹xml_importer.py
-  │   ├── inventory
-  │   │   ├── 🔹inventory_iterator.py
-  │   │   ├── 🔹inventory_refactor.py
-  │   │   └── 🔹inventory.py
-  │   │   └── 🔸product.py
-  │   ├── reports
-  │   │   ├── 🔸colored_report.py
-  │   │   ├── 🔹complete_report.py
-  │   │   └── 🔹simple_report.py
-  │   └── 🔹main.py
-  └── tests
-  │   ├── factories
-  │   │   ├── 🔸__init__.py
-  │   │   └── 🔸product_factory.py
-  │   ├── product
-  │   │   ├── 🔸__init__.py
-  │   │   ├── 🔸conftest.py
-  │   │   ├── 🔸mocks.py
-  │   │   └── 🔹test_product.py
-  │   ├── product_report
-  │   │   ├── 🔸__init__.py
-  │   │   ├── 🔸conftest.py
-  │   │   ├── 🔸mocks.py
-  │   │   └── 🔹test_product_report.py
-  │   ├── report_decorator
-  │   │   ├── 🔸__init__.py
-  │   │   ├── 🔸conftest.py
-  │   │   ├── 🔸mocks.py
-  │   │   └── 🔹test_report_decorator.py
-  │   ├── 🔸__init__.py
-  │   ├── 🔸marker.py
-  │   ├── 🔸test_complete_report.py
-  │   ├── 🔸test_importer.py
-  │   ├── 🔸test_inventory_refactor.py
-  │   ├── 🔸test_inventory.py
-  │   ├── 🔸test_main.py
-  │   └── 🔸test_simple_report.py
-  ├── 🔹dev-requirements.txt
-  ├── 🔸docker-compose.yml
-  ├── 🔸Dockerfile
-  ├── 🔸pyproject.toml
-  ├── 🔸README.md
-  ├── 🔸requirements.txt
-  ├── 🔸setup.cfg
-  ├── 🔸setup.py
-  └── 🔸trybe.yml
-  ```
-
-  Apesar do projeto já possuir uma **estrutura base**, você perceberá que possui arquivos vazios, ou seja, neles você quem deve implementar as classes. Novos arquivos e funções podem ser criados conforme a necessidade da sua implementação, porém não remova arquivos já existentes.
-
-</details>
-
-<details>
-  <summary><strong>🎛 Linter</strong></summary><br />
-
-  Para garantir a qualidade do código, vamos utilizar neste projeto o linter `Flake8`.
-  Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível
-  e de fácil manutenção! Para rodá-lo localmente no projeto, execute o comandos abaixo:
-
-  ```bash
-  python3 -m flake8
-  ```
-
-  ⚠️ **PULL REQUESTS COM ISSUES DE LINTER NÃO SERÃO AVALIADAS.
-  ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠️
-</details>
-
-<details>
-  <summary><strong>🏕️ Ambiente Virtual</strong></summary><br />
-  O Python oferece um recurso chamado de ambiente virtual, onde permite sua máquina rodar sem conflitos, diferentes tipos de projetos com diferentes versões de bibliotecas.
-
-  1. **criar o ambiente virtual**
-
-  ```bash
-  $ python3 -m venv .venv
-  ```
-
-  2. **ativar o ambiente virtual**
-
-  ```bash
-  $ source .venv/bin/activate
-  ```
-
-  3. **instalar as dependências no ambiente virtual**
-
-  ```bash
-  $ python3 -m pip install -r dev-requirements.txt
-  ```
-
-  Com o seu ambiente virtual ativo, as dependências serão instaladas neste ambiente.
-  Quando precisar desativar o ambiente virtual, execute o comando "deactivate". Lembre-se de ativar novamente quando voltar a trabalhar no projeto.
-
-  O arquivo `dev-requirements.txt` contém todas as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`.
-</details>
-
-<details>
-  <summary><strong>🛠 Testes</strong></summary><br />
-
-  Para executar os testes certifique-se de que você está com o ambiente virtual ativado
-
-  <strong>Executar os testes</strong>
-
-  ```bash
-  $ python3 -m pytest
-  ```
-
-  O arquivo `pyproject.toml` já configura corretamente o pytest. Entretanto, caso você tenha problemas com isso e queira explicitamente uma saída completa, o comando é:
-
-  ```bash
-  python3 -m pytest -s -vv
-  ```
-
-  Caso precise executar apenas um arquivo de testes basta executar o comando:
-
-  ```bash
-  python3 -m pytest tests/nomedoarquivo.py
-  ```
-
-  Caso precise executar apenas uma função de testes basta executar o comando:
-
-  ```bash
-  python3 -m pytest -k nome_da_func_de_tests
-  ```
-
-  Se desejar que os testes parem de ser executados quando acontecer o primeiro erro, use o parâmetro `-x`
-
-  ```bash
-  python3 -m pytest -x tests/test_simple_report.py
-  ```
-
-  Caso queria executar um teste especifico de um arquivo basta executar o comando:
-
-  ```bash
-  python3 -m pytest -x tests/nomedoarquivo.py::test_nome_do_teste
-  ```
-
-  Se quiser saber mais sobre a instalação de dependências com `pip`, veja esse [artigo](https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1).
-
 </details>
 
 <details>
@@ -298,26 +56,6 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
   ```
 </details>
 
-<details>
-  <summary><strong>🛼Executando o Projeto</strong></summary>
-  Após implementar o requisito bônus, seu programa deverá ser executável <strong>via linha de comando</strong>.
-  
-  O comando a ser executado será `inventory_report`. Para que ele funcione em seu ambiente é preciso antes instalar o próprio código como um pacote pip:
-  <code>pip install .</code>
-
-  Agora você poderá chamar o comando `inventory_report` passando seus argumentos:
-  
-  <code>inventory_report `argumento1` `argumento2`</code>
-
-  - **argumento1** deve receber o caminho de um arquivo a ser importado. O arquivo pode ser um `csv`, `json` ou `xml`.
-
-  - **argumento2** pode receber duas strings: `simples` ou `completo`, cada uma gerando o respectivo relatório.
-  
-  Outra opção é invocar o comando assim:
-
-  <code>python3 -m inventory_report.main argumento1 argumento2</code>
-
-</details>
 
 <details>
   <summary><strong>🗃️ Arquivos com os dados de entrada</strong></summary><br />
@@ -369,54 +107,6 @@ Os arquivos **XML** seguem o seguinte modelo:
 ```
 </details>
 
-<details>
-  <summary><strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong></summary><br />
-
-  Para sinalizar que o seu projeto está pronto para o _"Code Review"_, faça o seguinte:
-
-  - Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-    - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-    - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-    - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-023-b`.
-
-  Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-</details>
-
-<details>
-  <summary><strong>🕵🏿 Revisando um pull request</strong></summary><br />
-
-  Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-</details>
-
-<details>
-  <summary><strong>🗣 Nos dê feedbacks sobre o projeto!</strong></summary><br />
-
-  Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. 
-  **Leva menos de 3 minutos!**
-
-[FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH23-B&template=betrybe/sd-0x-inventory-report)
-
-</details>
-
-<details>
-  <summary><strong>🗂 Compartilhe seu portfólio!</strong></summary><br />
-
-  Agora que você finalizou os requisitos, chegou a hora de mostrar ao mundo que você aprendeu algo novo! 🚀
-
-  Siga esse [**guia que preparamos com carinho**](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/a3cac6d2-5060-445d-81f4-ea33451d8ea4/section/d4f5e97a-ca66-4e28-945d-9dd5c4282085/day/eff12025-1627-42c6-953d-238e9222c8ff/lesson/49cb103b-9e08-4ad5-af17-d423a624285a) para disponibilizar o projeto finalizado no seu GitHub pessoal.
-
-  Esse passo é super importante para ganhar mais visibilidade no mercado de trabalho, mas também é útil para manter um back-up do seu trabalho.
-
-  E você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
-</details>
-
----
-
 # Requisitos obrigatórios
 
 ## 1 - Testar o construtor/inicializador do objeto Produto
@@ -446,14 +136,6 @@ O nome deste teste deve ser `test_cria_produto`, ele deve verificar o correto pr
 
   - **1** - Deve criar um novo produto com todos os atributos corretamente preenchidos.
 
-</details>
-
-<details>
-  <summary>
-    <b>📌Como seu teste é avaliado</b>
-  </summary>
-  O <strong>teste da Trybe</strong> irá avaliar se o <strong>seu teste</strong> está passando conforme seu objetivo, e confirmará se ele está falhando em alguns casos que deve falhar.
-  Para estes testes que esperemos que falhe, o requisito será considerado atendindo quando a resposta do Pytest for <code>XFAIL(Expected Fail)</code>, ao invés de <code>PASS</code> ou <code>FAIL</code>.
 </details>
 
 
@@ -704,14 +386,6 @@ O nome deste teste deve ser `test_relatorio_produto`, ele deve instanciar um obj
 
   - **8** - Se seu código testa que o retorno padrão (`__repr__`) de um objeto `Product` deve ser um relatório sobre ele 
 </details>
-    
-<details>
-  <summary>
-    <b>📌Como seu teste é avaliado</b>
-  </summary>
-  O <strong>teste da Trybe</strong> irá avaliar se o <strong>seu teste</strong> está passando conforme seu objetivo, e confirmará se ele está falhando em alguns casos que deve falhar.
-  Para estes testes que esperemos que falhe, o requisito será considerado atendindo quando a resposta do Pytest for <code>XFAIL(Expected Fail)</code>, ao invés de <code>PASS</code> ou <code>FAIL</code>.
-</details>
 
 
 ## 9 - Testar a geração de uma versão do relatório em cores
@@ -758,14 +432,6 @@ O nome deste teste deve ser `test_decorar_relatorio`, ele deve verificar se o re
         - "Empresa com mais produtos:"
     -  **azul:** As datas
     - **vermelho:** Nome da empresa com mais produtos
-</details>
-
-<details>
-  <summary>
-    <b>📌Como seu teste é avaliado</b>
-  </summary>
-  O <strong>teste da Trybe</strong> irá avaliar se o <strong>seu teste</strong> está passando conforme seu objetivo, e confirmará se ele está falhando em alguns casos que deve falhar.
-  Para estes testes que esperemos que falhe, o requisito será considerado atendindo quando a resposta do Pytest for <code>XFAIL(Expected Fail)</code>, ao invés de <code>PASS</code> ou <code>FAIL</code>.
 </details>
 
 # Requisitos bônus
